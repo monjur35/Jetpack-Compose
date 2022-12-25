@@ -100,6 +100,8 @@ fun MessageCard(msg: Message) {
 fun Conversation(messages: List<Message>) {
 
 
+
+
     Scaffold(
         topBar = {
             TopAppBar(
