@@ -1,27 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.superapp.tingtongapp.composetutorial.app-mergeDebugResources-33:/values-fa/values-fa.xml",
+            "outputFile": "com.superapp.tingtongapp.composetutorial.app-mergeDebugResources-44:/values-fa/values-fa.xml",
             "map": [
                 {
-                    "source": "/Users/tamanna/.gradle/caches/transforms-3/8d5d3970b916db844f7971374d92a7dd/transformed/ui-1.1.1/res/values-fa/values-fa.xml",
+                    "source": "/Users/tamanna/.gradle/caches/transforms-3/83bd272bfaae8ad37d039017cdb3d068/transformed/ui-1.2.0/res/values-fa/values-fa.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,192,271,365,463,549,631,750,835,918,985,1051,1125,1192",
-                        "endColumns": "86,78,93,97,85,81,118,84,82,66,65,73,66,116",
-                        "endOffsets": "187,266,360,458,544,626,745,830,913,980,1046,1120,1187,1304"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,192,271,365,463,549,631,750,835,918,985,1051,1132,1214,1288,1355",
+                        "endColumns": "86,78,93,97,85,81,118,84,82,66,65,80,81,73,66,116",
+                        "endOffsets": "187,266,360,458,544,626,745,830,913,980,1046,1127,1209,1283,1350,1467"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,15,16",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,192,271,365,463,549,631,750,835,918,985,1051,1226,1293",
-                        "endColumns": "86,78,93,97,85,81,118,84,82,66,65,73,66,116",
-                        "endOffsets": "187,266,360,458,544,626,745,830,913,980,1046,1120,1288,1405"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,192,271,365,463,549,631,750,835,918,985,1051,1132,1214,1389,1456",
+                        "endColumns": "86,78,93,97,85,81,118,84,82,66,65,80,81,73,66,116",
+                        "endOffsets": "187,266,360,458,544,626,745,830,913,980,1046,1127,1209,1283,1451,1568"
                     }
                 },
                 {
-                    "source": "/Users/tamanna/.gradle/caches/transforms-3/2157ea49cdc3c5b2f06f3fe4a50dab4f/transformed/core-1.7.0/res/values-fa/values-fa.xml",
+                    "source": "/Users/tamanna/.gradle/caches/transforms-3/8daa366fed296cd3fd3200fda271128f/transformed/core-1.9.0/res/values-fa/values-fa.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,11 +30,11 @@
                         "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "14",
+                        "startLines": "16",
                         "startColumns": "4",
-                        "startOffsets": "1125",
+                        "startOffsets": "1288",
                         "endColumns": "100",
-                        "endOffsets": "1221"
+                        "endOffsets": "1384"
                     }
                 }
             ]

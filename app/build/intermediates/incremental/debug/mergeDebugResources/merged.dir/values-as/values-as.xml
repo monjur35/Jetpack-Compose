@@ -11,6 +11,8 @@
     <string msgid="6610465462668679431" name="not_selected">"বাছনি কৰা হোৱা নাই"</string>
     <string msgid="875452955155264703" name="off">"অফ আছে"</string>
     <string msgid="8655164131929253426" name="on">"অন কৰা আছে"</string>
+    <string msgid="5941395253238309765" name="range_end">"পৰিসৰৰ সমাপ্তি"</string>
+    <string msgid="7097486360902471446" name="range_start">"পৰিসৰৰ আৰম্ভণি"</string>
     <string msgid="6043586758067023" name="selected">"বাছনি কৰা হৈছে"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"৯৯৯+"</string>
     <string msgid="1672349317127674378" name="tab">"টেব"</string>
