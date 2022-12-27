@@ -4,24 +4,7 @@
             "outputFile": "com.superapp.tingtongapp.composetutorial.app-mergeDebugResources-44:/values-gu/values-gu.xml",
             "map": [
                 {
-                    "source": "/Users/tamanna/.gradle/caches/transforms-3/22ec13ccf8c8ad9780dfe8608c9024a0/transformed/ui-1.2.0/res/values-gu/values-gu.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,197,279,372,471,558,644,747,834,920,988,1057,1140,1223,1298,1364",
-                        "endColumns": "91,81,92,98,86,85,102,86,85,67,68,82,82,74,65,115",
-                        "endOffsets": "192,274,367,466,553,639,742,829,915,983,1052,1135,1218,1293,1359,1475"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,18",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,197,279,372,471,558,644,747,834,920,988,1057,1140,1223,1399,1465",
-                        "endColumns": "91,81,92,98,86,85,102,86,85,67,68,82,82,74,65,115",
-                        "endOffsets": "192,274,367,466,553,639,742,829,915,983,1052,1135,1218,1293,1460,1576"
-                    }
-                },
-                {
-                    "source": "/Users/tamanna/.gradle/caches/transforms-3/bbe9b278b341f6713612fcf79344adcf/transformed/core-1.9.0/res/values-gu/values-gu.xml",
+                    "source": "C:\\Users\\monju\\.gradle\\caches\\transforms-3\\bbe9b278b341f6713612fcf79344adcf\\transformed\\core-1.9.0\\res\\values-gu\\values-gu.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -35,6 +18,23 @@
                         "startOffsets": "1298",
                         "endColumns": "100",
                         "endOffsets": "1394"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\monju\\.gradle\\caches\\transforms-3\\22ec13ccf8c8ad9780dfe8608c9024a0\\transformed\\ui-1.2.0\\res\\values-gu\\values-gu.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,197,279,372,471,558,644,747,834,920,988,1057,1140,1223,1298,1364",
+                        "endColumns": "91,81,92,98,86,85,102,86,85,67,68,82,82,74,65,115",
+                        "endOffsets": "192,274,367,466,553,639,742,829,915,983,1052,1135,1218,1293,1359,1475"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,197,279,372,471,558,644,747,834,920,988,1057,1140,1223,1399,1465",
+                        "endColumns": "91,81,92,98,86,85,102,86,85,67,68,82,82,74,65,115",
+                        "endOffsets": "192,274,367,466,553,639,742,829,915,983,1052,1135,1218,1293,1460,1576"
                     }
                 }
             ]

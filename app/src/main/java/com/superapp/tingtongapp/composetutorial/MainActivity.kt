@@ -1,9 +1,11 @@
 package com.superapp.tingtongapp.composetutorial
 
+import android.annotation.SuppressLint
 import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -14,32 +16,42 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.List
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.superapp.tingtongapp.composetutorial.response.gamesList.GamesListResponse
+import com.superapp.tingtongapp.composetutorial.response.gamesList.GamesListResponseItem
 import com.superapp.tingtongapp.composetutorial.ui.theme.ComposeTutorialTheme
+import dagger.hilt.EntryPoint
 
+@EntryPoint
 class MainActivity : ComponentActivity() {
+
+    val vm: GameViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            Conversation(messages = SampleData.conversationSample)
-        }
+      vm.getGameList().observe(this) {
+          setContent {
+              val a=it
+              Conversation(messages = it)
+          }
+      }
+
+
+
     }
 }
 
 data class Message(val name: String, val age: String)
 
 @Composable
-fun MessageCard(msg: Message) {
+fun MessageCard(msg: GamesListResponseItem) {
     Surface(
         shape = MaterialTheme.shapes.medium,
         elevation = 5.dp,
@@ -66,7 +78,7 @@ fun MessageCard(msg: Message) {
 
             Column(modifier = Modifier.clickable { isExpanded = !isExpanded }) {
                 Text(
-                    text = "${msg.name}!",
+                    text = "${msg.publisher}!",
                     fontFamily = FontFamily.Monospace,
                     color = MaterialTheme.colors.secondaryVariant,
                     style = MaterialTheme.typography.subtitle1
@@ -80,7 +92,7 @@ fun MessageCard(msg: Message) {
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(
-                        text = "Age: ${msg.age}!",
+                        text = "Age: ${msg.release_date}!",
                         fontFamily = FontFamily.Monospace,
                         modifier = Modifier.padding(all = 4.dp),
                         style = MaterialTheme.typography.body1,
@@ -96,8 +108,9 @@ fun MessageCard(msg: Message) {
 
 }
 
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun Conversation(messages: List<Message>) {
+fun Conversation(messages: GamesListResponse) {
 
 
 
@@ -136,9 +149,8 @@ fun Conversation(messages: List<Message>) {
 fun DefaultPreview() {
     ComposeTutorialTheme {
         val a = Message("Monjur", "27")
-        //MessageCard(a)
 
-        Conversation(messages = SampleData.conversationSample)
+
 
     }
 }
