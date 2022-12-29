@@ -16,17 +16,11 @@ object RetrofitBuilder {
 
     @Singleton
     @Provides
-    private fun retrofit() = Retrofit.Builder().baseUrl(baseUrl)
+     fun retrofit() = Retrofit.Builder().baseUrl(baseUrl)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create(ApiInterface::class.java)
 
 
-    @Singleton
-    @Provides
-    fun provideRepository(api:ApiInterface) : Repository = DefualtMainRepository(api)
 
-    private fun DefualtMainRepository(api: ApiInterface): Repository {
-
-    }
 }

@@ -61,6 +61,7 @@ dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
 drawable abc_vector_test
+drawable ic_100tb
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable img

@@ -20,7 +20,6 @@ color androidx_core_ripple_material_light
 color androidx_core_secondary_text_default_material_light
 color notification_action_color_filter
 color notification_icon_bg_color
-color triangle_color
 color vector_tint_color
 color vector_tint_theme_color
 dimen compat_button_inset_horizontal_material
@@ -100,6 +99,7 @@ id async
 id blocking
 id chronometer
 id compose_view_saveable_id_tag
+id consume_window_insets_tag
 id dialog_button
 id forever
 id hide_in_inspector_tag
@@ -107,17 +107,15 @@ id icon
 id icon_group
 id info
 id inspection_slot_table_set
+id is_pooling_container_tag
 id italic
-id item1
-id item2
-id item3
-id item4
 id line1
 id line3
 id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id pooling_container_listener_holder_tag
 id right_icon
 id right_side
 id tag_accessibility_actions
@@ -138,6 +136,7 @@ id text2
 id time
 id title
 id view_tree_lifecycle_owner
+id view_tree_on_back_pressed_dispatcher_owner
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id wrapped_composition_tag
@@ -149,8 +148,6 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
-menu example_menu
-menu example_menu2
 string androidx_startup
 string close_drawer
 string close_sheet
@@ -163,6 +160,8 @@ string navigation_menu
 string not_selected
 string off
 string on
+string range_end
+string range_start
 string selected
 string status_bar_notification_info_overflow
 string tab

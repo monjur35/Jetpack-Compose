@@ -20,16 +20,20 @@ import androidx.compose.material.icons.filled.List
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.scale
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import coil.compose.rememberAsyncImagePainter
 import com.superapp.tingtongapp.composetutorial.response.gamesList.GamesListResponse
 import com.superapp.tingtongapp.composetutorial.response.gamesList.GamesListResponseItem
 import com.superapp.tingtongapp.composetutorial.ui.theme.ComposeTutorialTheme
 import dagger.hilt.EntryPoint
+import dagger.hilt.android.AndroidEntryPoint
 
-@EntryPoint
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     val vm: GameViewModel by viewModels()
@@ -38,7 +42,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
       vm.getGameList().observe(this) {
           setContent {
-              val a=it
               Conversation(messages = it)
           }
       }
@@ -62,14 +65,17 @@ fun MessageCard(msg: GamesListResponseItem) {
 
 
     ) {
-        Row(modifier = Modifier.padding(all = 8.dp)) {
+        Column(modifier = Modifier.padding(all = 8.dp)) {
             Image(
-                painter = painterResource(id = R.drawable.img),
+                painter = rememberAsyncImagePainter(msg.thumbnail),
                 contentDescription = "",
                 modifier = Modifier
-                    .size(50.dp)
-                    .clip(CircleShape)
-                    .border(1.dp, MaterialTheme.colors.primaryVariant, CircleShape)
+                    .clickable {  }
+                    .size(500.dp)
+                    .scale(1f),
+                  //  .fillMaxSize(),
+                  //  .border(1.dp, MaterialTheme.colors.primaryVariant, CircleShape),
+                contentScale = ContentScale.Crop
 
             )
             Spacer(modifier = Modifier.width(10.dp))
@@ -78,7 +84,7 @@ fun MessageCard(msg: GamesListResponseItem) {
 
             Column(modifier = Modifier.clickable { isExpanded = !isExpanded }) {
                 Text(
-                    text = "${msg.publisher}!",
+                    text = "${msg.title}!",
                     fontFamily = FontFamily.Monospace,
                     color = MaterialTheme.colors.secondaryVariant,
                     style = MaterialTheme.typography.subtitle1
@@ -92,7 +98,7 @@ fun MessageCard(msg: GamesListResponseItem) {
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(
-                        text = "Age: ${msg.release_date}!",
+                        text = msg.short_description,
                         fontFamily = FontFamily.Monospace,
                         modifier = Modifier.padding(all = 4.dp),
                         style = MaterialTheme.typography.body1,
@@ -111,9 +117,6 @@ fun MessageCard(msg: GamesListResponseItem) {
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun Conversation(messages: GamesListResponse) {
-
-
-
 
     Scaffold(
         topBar = {

@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.superapp.tingtongapp.composetutorial.test.app-mergeDebugAndroidTestResources-24:/values-bs/values-bs.xml",
+            "outputFile": "com.superapp.tingtongapp.composetutorial.test.app-mergeDebugAndroidTestResources-30:/values-bs/values-bs.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Monjur\\.gradle\\caches\\transforms-3\\2157ea49cdc3c5b2f06f3fe4a50dab4f\\transformed\\core-1.7.0\\res\\values-bs\\values-bs.xml",
+                    "source": "C:\\Users\\monju\\.gradle\\caches\\transforms-3\\22ec13ccf8c8ad9780dfe8608c9024a0\\transformed\\ui-1.2.0\\res\\values-bs\\values-bs.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,206,294,388,487,573,650,749,841,926,998,1069,1150,1236,1309,1379",
+                        "endColumns": "100,87,93,98,85,76,98,91,84,71,70,80,85,72,69,117",
+                        "endOffsets": "201,289,383,482,568,645,744,836,921,993,1064,1145,1231,1304,1374,1492"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,206,294,388,487,573,650,749,841,926,998,1069,1150,1236,1410,1480",
+                        "endColumns": "100,87,93,98,85,76,98,91,84,71,70,80,85,72,69,117",
+                        "endOffsets": "201,289,383,482,568,645,744,836,921,993,1064,1145,1231,1304,1475,1593"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\monju\\.gradle\\caches\\transforms-3\\bbe9b278b341f6713612fcf79344adcf\\transformed\\core-1.9.0\\res\\values-bs\\values-bs.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -13,28 +30,11 @@
                         "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "14",
+                        "startLines": "16",
                         "startColumns": "4",
-                        "startOffsets": "1142",
+                        "startOffsets": "1309",
                         "endColumns": "100",
-                        "endOffsets": "1238"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Monjur\\.gradle\\caches\\transforms-3\\8d5d3970b916db844f7971374d92a7dd\\transformed\\ui-1.1.1\\res\\values-bs\\values-bs.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,206,294,388,487,573,650,749,841,926,998,1069,1142,1212",
-                        "endColumns": "100,87,93,98,85,76,98,91,84,71,70,72,69,117",
-                        "endOffsets": "201,289,383,482,568,645,744,836,921,993,1064,1137,1207,1325"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,15,16",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,206,294,388,487,573,650,749,841,926,998,1069,1243,1313",
-                        "endColumns": "100,87,93,98,85,76,98,91,84,71,70,72,69,117",
-                        "endOffsets": "201,289,383,482,568,645,744,836,921,993,1064,1137,1308,1426"
+                        "endOffsets": "1405"
                     }
                 }
             ]

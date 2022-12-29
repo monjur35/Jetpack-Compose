@@ -1,6 +1,8 @@
 package com.superapp.tingtongapp.composetutorial.di;
 
 import com.superapp.tingtongapp.composetutorial.GameViewModel_HiltModules;
+import com.superapp.tingtongapp.composetutorial.MainActivity_GeneratedInjector;
+import com.superapp.tingtongapp.composetutorial.network.RetrofitBuilder;
 import dagger.Binds;
 import dagger.Component;
 import dagger.Module;
@@ -118,7 +120,8 @@ public final class ApplicationClass_HiltComponents {
           ActivityRetainedCBuilderModule.class,
           ServiceCBuilderModule.class,
           ApplicationContextModule.class,
-          HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule.class
+          HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule.class,
+          RetrofitBuilder.class
       }
   )
   @Singleton
@@ -166,7 +169,8 @@ public final class ApplicationClass_HiltComponents {
       }
   )
   @ActivityScoped
-  public abstract static class ActivityC implements ActivityComponent,
+  public abstract static class ActivityC implements MainActivity_GeneratedInjector,
+      ActivityComponent,
       DefaultViewModelFactories.ActivityEntryPoint,
       HiltWrapper_HiltViewModelFactory_ActivityCreatorEntryPoint,
       FragmentComponentManager.FragmentComponentBuilderEntryPoint,

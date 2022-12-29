@@ -17,6 +17,7 @@
     <uses-permission android:name="com.superapp.tingtongapp.composetutorial.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
+        android:name="com.superapp.tingtongapp.composetutorial.di.ApplicationClass"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:dataExtractionRules="@xml/data_extraction_rules"

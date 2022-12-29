@@ -11,6 +11,8 @@
     <string msgid="6610465462668679431" name="not_selected">"ಆಯ್ಕೆ ಮಾಡಿಲ್ಲ"</string>
     <string msgid="875452955155264703" name="off">"ಆಫ್ ಆಗಿದೆ"</string>
     <string msgid="8655164131929253426" name="on">"ಆನ್ ಆಗಿದೆ"</string>
+    <string msgid="5941395253238309765" name="range_end">"ಶ್ರೇಣಿಯ ಅಂತ್ಯ"</string>
+    <string msgid="7097486360902471446" name="range_start">"ಶ್ರೇಣಿಯ ಪ್ರಾರಂಭ"</string>
     <string msgid="6043586758067023" name="selected">"ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
     <string msgid="1672349317127674378" name="tab">"ಟ್ಯಾಬ್"</string>

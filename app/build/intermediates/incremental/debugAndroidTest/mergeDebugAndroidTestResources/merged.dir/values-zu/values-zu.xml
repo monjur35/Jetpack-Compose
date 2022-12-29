@@ -11,6 +11,8 @@
     <string msgid="6610465462668679431" name="not_selected">"Ayikhethiwe"</string>
     <string msgid="875452955155264703" name="off">"Valiwe"</string>
     <string msgid="8655164131929253426" name="on">"Vuliwe"</string>
+    <string msgid="5941395253238309765" name="range_end">"Umkhawulo wobubanzi"</string>
+    <string msgid="7097486360902471446" name="range_start">"Ukuqala kobubanzi"</string>
     <string msgid="6043586758067023" name="selected">"Okukhethiwe"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
     <string msgid="1672349317127674378" name="tab">"Ithebhu"</string>
