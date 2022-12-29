@@ -1,5 +1,6 @@
 package com.superapp.tingtongapp.composetutorial.network;
 
+import dagger.Provides;
 import dagger.hilt.InstallIn;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
