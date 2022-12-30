@@ -1,6 +1,9 @@
 package com.superapp.tingtongapp.composetutorial
 
 import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,29 +11,26 @@ import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.List
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
+import com.google.android.material.button.MaterialButton
 import com.superapp.tingtongapp.composetutorial.response.gamesList.GamesListResponse
 import com.superapp.tingtongapp.composetutorial.response.gamesList.GamesListResponseItem
 import com.superapp.tingtongapp.composetutorial.ui.theme.ComposeTutorialTheme
-import dagger.hilt.EntryPoint
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -40,12 +40,11 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-      vm.getGameList().observe(this) {
-          setContent {
-              Conversation(messages = it)
-          }
-      }
-
+        vm.getGameList().observe(this) {
+            setContent {
+                Conversation(messages = it)
+            }
+        }
 
 
     }
@@ -61,21 +60,21 @@ fun MessageCard(msg: GamesListResponseItem) {
         color = MaterialTheme.colors.background,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(10.dp)
+            .padding(10.dp),
 
 
-    ) {
+        ) {
         Column(modifier = Modifier.padding(all = 8.dp)) {
             Image(
                 painter = rememberAsyncImagePainter(msg.thumbnail),
                 contentDescription = "",
                 modifier = Modifier
-                    .clickable {  }
                     .size(500.dp)
                     .scale(1f),
-                  //  .fillMaxSize(),
-                  //  .border(1.dp, MaterialTheme.colors.primaryVariant, CircleShape),
-                contentScale = ContentScale.Crop
+                //  .fillMaxSize(),
+                //  .border(1.dp, MaterialTheme.colors.primaryVariant, CircleShape),
+                contentScale = ContentScale.Crop,
+                
 
             )
             Spacer(modifier = Modifier.width(10.dp))
@@ -114,6 +113,16 @@ fun MessageCard(msg: GamesListResponseItem) {
 
 }
 
+
+@Composable
+fun OpenPermissionSetting() {
+
+    val activity= LocalContext.current as Activity
+
+    activity.startActivity(Intent(activity, DetailsActivity::class.java))
+
+}
+
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun Conversation(messages: GamesListResponse) {
@@ -141,9 +150,6 @@ fun Conversation(messages: GamesListResponse) {
         })
 
 
-
-
-
 }
 
 @Preview(showBackground = true)
@@ -151,9 +157,6 @@ fun Conversation(messages: GamesListResponse) {
 @Composable
 fun DefaultPreview() {
     ComposeTutorialTheme {
-        val a = Message("Monjur", "27")
-
-
 
     }
 }

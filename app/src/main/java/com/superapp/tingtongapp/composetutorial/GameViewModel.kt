@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.superapp.tingtongapp.composetutorial.response.gamesList.GamesListResponse
+import com.superapp.tingtongapp.composetutorial.response.gamesList.GamesListResponseItem
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.*
 import javax.inject.Inject
@@ -35,6 +36,23 @@ class GameViewModel @Inject constructor(val repository: Repository)  :ViewModel(
 
         return gamesListResponseLiveData
 
+    }
+
+    fun getGameDetails(id:Int){
+        val responseLiveData=MutableLiveData<GamesListResponseItem>()
+
+        job= CoroutineScope(Dispatchers.IO+exceptionHandler).launch {
+            val response=repository.getGameDetails(id)
+            if (response.isSuccessful){
+                responseLiveData.postValue(
+                    response.body()
+                )
+            }
+            else{
+                onError(response.message())
+                Log.e("TAG", "getGameDetails: $response", )
+            }
+        }
     }
 
     private fun onError(message: String) {
