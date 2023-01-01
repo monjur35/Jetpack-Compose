@@ -13,6 +13,7 @@ import com.superapp.tingtongapp.composetutorial.MainActivity;
 import com.superapp.tingtongapp.composetutorial.Repository;
 import com.superapp.tingtongapp.composetutorial.network.ApiInterface;
 import com.superapp.tingtongapp.composetutorial.network.RetrofitBuilder;
+import com.superapp.tingtongapp.composetutorial.network.RetrofitBuilder_ProvideRepositoryFactory;
 import com.superapp.tingtongapp.composetutorial.network.RetrofitBuilder_RetrofitFactory;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.ViewModelLifecycle;
@@ -413,10 +414,6 @@ public final class DaggerApplicationClass_HiltComponents_SingletonC {
 
     }
 
-    private Repository repository() {
-      return new Repository(singletonCImpl.retrofitProvider.get());
-    }
-
     @SuppressWarnings("unchecked")
     private void initialize(final SavedStateHandle savedStateHandleParam,
         final ViewModelLifecycle viewModelLifecycleParam) {
@@ -450,7 +447,7 @@ public final class DaggerApplicationClass_HiltComponents_SingletonC {
       public T get() {
         switch (id) {
           case 0: // com.superapp.tingtongapp.composetutorial.GameViewModel 
-          return (T) new GameViewModel(viewModelCImpl.repository());
+          return (T) new GameViewModel(singletonCImpl.provideRepositoryProvider.get());
 
           default: throw new AssertionError(id);
         }
@@ -531,6 +528,8 @@ public final class DaggerApplicationClass_HiltComponents_SingletonC {
 
     private Provider<ApiInterface> retrofitProvider;
 
+    private Provider<Repository> provideRepositoryProvider;
+
     private SingletonCImpl() {
 
       initialize();
@@ -539,7 +538,8 @@ public final class DaggerApplicationClass_HiltComponents_SingletonC {
 
     @SuppressWarnings("unchecked")
     private void initialize() {
-      this.retrofitProvider = DoubleCheck.provider(new SwitchingProvider<ApiInterface>(singletonCImpl, 0));
+      this.retrofitProvider = DoubleCheck.provider(new SwitchingProvider<ApiInterface>(singletonCImpl, 1));
+      this.provideRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<Repository>(singletonCImpl, 0));
     }
 
     @Override
@@ -575,7 +575,10 @@ public final class DaggerApplicationClass_HiltComponents_SingletonC {
       @Override
       public T get() {
         switch (id) {
-          case 0: // com.superapp.tingtongapp.composetutorial.network.ApiInterface 
+          case 0: // com.superapp.tingtongapp.composetutorial.Repository 
+          return (T) RetrofitBuilder_ProvideRepositoryFactory.provideRepository(singletonCImpl.retrofitProvider.get());
+
+          case 1: // com.superapp.tingtongapp.composetutorial.network.ApiInterface 
           return (T) RetrofitBuilder_RetrofitFactory.retrofit();
 
           default: throw new AssertionError(id);

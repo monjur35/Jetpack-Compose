@@ -35,18 +35,17 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+    private val vm: GameViewModel by viewModels()
 
-    val vm: GameViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         vm.getGameList().observe(this) {
             setContent {
                 Conversation(messages = it)
             }
         }
-
-
     }
 }
 
@@ -74,9 +73,9 @@ fun MessageCard(msg: GamesListResponseItem) {
                 //  .fillMaxSize(),
                 //  .border(1.dp, MaterialTheme.colors.primaryVariant, CircleShape),
                 contentScale = ContentScale.Crop,
-                
 
-            )
+
+                )
             Spacer(modifier = Modifier.width(10.dp))
             var isExpanded by remember { mutableStateOf(false) }
             val surfaceColor by animateColorAsState(if (isExpanded) MaterialTheme.colors.primary else MaterialTheme.colors.surface)
@@ -117,7 +116,7 @@ fun MessageCard(msg: GamesListResponseItem) {
 @Composable
 fun OpenPermissionSetting() {
 
-    val activity= LocalContext.current as Activity
+    val activity = LocalContext.current as Activity
 
     activity.startActivity(Intent(activity, DetailsActivity::class.java))
 
@@ -138,9 +137,7 @@ fun Conversation(messages: GamesListResponse) {
                         Icon(Icons.Filled.List, "backIcon")
                     }
                 },
-
-
-                )
+            )
         }, content = {
             LazyColumn {
                 items(messages) { message ->

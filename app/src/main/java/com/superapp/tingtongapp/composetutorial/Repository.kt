@@ -6,8 +6,8 @@ import com.superapp.tingtongapp.composetutorial.response.gamesList.GamesListResp
 import retrofit2.Response
 import javax.inject.Inject
 
-class Repository @Inject constructor(private val apiInterface: ApiInterface) {
-    suspend fun getGameList():Response<GamesListResponse> = apiInterface.getGamesList()
-    suspend fun getGameDetails(id:Int):Response<GamesListResponseItem> = apiInterface.getGamesDetails(id)
+interface Repository  {
+    suspend fun getGameList():Response<GamesListResponse>
+    suspend fun getGameDetails(id:Int):Response<GamesListResponseItem>
 
 }

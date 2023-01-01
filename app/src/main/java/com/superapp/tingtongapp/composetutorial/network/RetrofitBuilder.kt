@@ -3,6 +3,7 @@ package com.superapp.tingtongapp.composetutorial.network
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.superapp.tingtongapp.composetutorial.Repository
+import com.superapp.tingtongapp.composetutorial.RepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -27,13 +28,20 @@ object RetrofitBuilder {
         OkHttpClient.Builder().retryOnConnectionFailure(true).connectTimeout(60, TimeUnit.SECONDS).build()
 
 
-    @Singleton
+
     @Provides
+    @Singleton
      fun retrofit() = Retrofit.Builder().baseUrl(baseUrl)
         .addConverterFactory(GsonConverterFactory.create(gson))
         .client(httpClient)
         .build()
         .create(ApiInterface::class.java)
+
+    @Provides
+    @Singleton
+    fun provideRepository(apiInterface: ApiInterface):Repository{
+        return RepositoryImpl(apiInterface)
+    }
 
 
 

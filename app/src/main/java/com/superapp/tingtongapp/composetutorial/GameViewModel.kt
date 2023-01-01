@@ -10,7 +10,7 @@ import kotlinx.coroutines.*
 import javax.inject.Inject
 
 @HiltViewModel
-class GameViewModel @Inject constructor(val repository: Repository)  :ViewModel() {
+class GameViewModel @Inject constructor(private val repository: Repository)  :ViewModel() {
 
     val errorMessage = MutableLiveData<String>()
     var job: Job? = null
