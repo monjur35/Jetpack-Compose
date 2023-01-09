@@ -1,159 +1,42 @@
 package com.superapp.tingtongapp.composetutorial
-
-import android.annotation.SuppressLint
-import android.app.Activity
-import android.content.Context
-import android.content.Intent
-import android.content.res.Configuration
+import com.superapp.tingtongapp.composetutorial.navigation.NavGraph
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
-import androidx.compose.animation.animateColorAsState
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.List
-import androidx.compose.runtime.*
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.scale
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import coil.compose.rememberAsyncImagePainter
-import com.google.android.material.button.MaterialButton
-import com.superapp.tingtongapp.composetutorial.response.gamesList.GamesListResponse
-import com.superapp.tingtongapp.composetutorial.response.gamesList.GamesListResponseItem
-import com.superapp.tingtongapp.composetutorial.ui.theme.ComposeTutorialTheme
+import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-    private val vm: GameViewModel by viewModels()
-
+    private val mainViewModel : MainViewModel by viewModels ()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        vm.getGameList().observe(this) {
+        val vm : MainViewModel by viewModels()
+        vm.getGameList().observe(this){
+            Log.e("TAG", "onCreate: $it", )
             setContent {
-                Conversation(messages = it)
-            }
-        }
-    }
-}
 
-data class Message(val name: String, val age: String)
-
-@Composable
-fun MessageCard(msg: GamesListResponseItem) {
-    Surface(
-        shape = MaterialTheme.shapes.medium,
-        elevation = 5.dp,
-        color = MaterialTheme.colors.background,
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(10.dp),
-
-
-        ) {
-        Column(modifier = Modifier.padding(all = 8.dp)) {
-            Image(
-                painter = rememberAsyncImagePainter(msg.thumbnail),
-                contentDescription = "",
-                modifier = Modifier
-                    .size(500.dp)
-                    .scale(1f),
-                //  .fillMaxSize(),
-                //  .border(1.dp, MaterialTheme.colors.primaryVariant, CircleShape),
-                contentScale = ContentScale.Crop,
-
-
-                )
-            Spacer(modifier = Modifier.width(10.dp))
-            var isExpanded by remember { mutableStateOf(false) }
-            val surfaceColor by animateColorAsState(if (isExpanded) MaterialTheme.colors.primary else MaterialTheme.colors.surface)
-
-            Column(modifier = Modifier.clickable { isExpanded = !isExpanded }) {
-                Text(
-                    text = "${msg.title}!",
-                    fontFamily = FontFamily.Monospace,
-                    color = MaterialTheme.colors.secondaryVariant,
-                    style = MaterialTheme.typography.subtitle1
-                )
-                Spacer(modifier = Modifier.height(5.dp))
-
-                Surface(
-                    shape = MaterialTheme.shapes.medium,
-                    elevation = 1.dp,
-                    color = surfaceColor,
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Text(
-                        text = msg.short_description,
-                        fontFamily = FontFamily.Monospace,
-                        modifier = Modifier.padding(all = 4.dp),
-                        style = MaterialTheme.typography.body1,
-                        maxLines = if (isExpanded) Int.MAX_VALUE else 1
-                    )
-
-                }
-
-            }
-        }
-    }
-
-
-}
-
-
-@Composable
-fun OpenPermissionSetting() {
-
-    val activity = LocalContext.current as Activity
-
-    activity.startActivity(Intent(activity, DetailsActivity::class.java))
-
-}
-
-@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
-@Composable
-fun Conversation(messages: GamesListResponse) {
-
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = {
-                    Text(text = "Top App Bar")
-                },
-                navigationIcon = {
-                    IconButton(onClick = {}) {
-                        Icon(Icons.Filled.List, "backIcon")
+                    // A surface container using the 'background' color from the theme
+                    Surface(
+                        modifier = Modifier.fillMaxSize(),
+                        color = MaterialTheme.colors.background
+                    ) {
+                        val navController = rememberNavController()
+                        NavGraph(navController = navController,it,mainViewModel)
                     }
-                },
-            )
-        }, content = {
-            LazyColumn {
-                items(messages) { message ->
-                    MessageCard(message)
-                }
+
             }
-        })
-
-
-}
-
-@Preview(showBackground = true)
-@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
-@Composable
-fun DefaultPreview() {
-    ComposeTutorialTheme {
+        }
 
     }
 }
+
+

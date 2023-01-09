@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.superapp.tingtongapp.composetutorial.app-mergeDebugResources-55:/values-nl/values-nl.xml",
+            "outputFile": "com.superapp.tingtongapp.composetutorial.app-mergeDebugResources-62:/values-nl/values-nl.xml",
             "map": [
                 {
                     "source": "C:\\Users\\monju\\.gradle\\caches\\transforms-3\\c4939d961508e5ef20624f4902a3499c\\transformed\\appcompat-1.4.1\\res\\values-nl\\values-nl.xml",
