@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.superapp.tingtongapp.composetutorial.app-mergeDebugResources-55:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+            "outputFile": "com.superapp.tingtongapp.composetutorial.app-mergeDebugResources-62:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\monju\\.gradle\\caches\\transforms-3\\1bf7fdab6d7c11f65e7df2e8fdb11970\\transformed\\material-1.4.0\\res\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",

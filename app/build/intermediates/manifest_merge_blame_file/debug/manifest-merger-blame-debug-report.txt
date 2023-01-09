@@ -26,9 +26,9 @@
 17-->[androidx.core:core:1.9.0] C:\Users\monju\.gradle\caches\transforms-3\bbe9b278b341f6713612fcf79344adcf\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 18
 19    <application
-19-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:7:5-40:19
-20        android:name="com.superapp.tingtongapp.composetutorial.di.ApplicationClass"
-20-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:8:9-44
+19-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:7:5-34:19
+20        android:name="com.superapp.tingtongapp.composetutorial.di.MyApp"
+20-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:8:9-33
 21        android:allowBackup="true"
 21-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:9:9-35
 22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -47,115 +47,103 @@
 29-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:14:9-54
 30        android:supportsRtl="true"
 30-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:15:9-35
-31        android:theme="@style/Theme.ComposeTutorial" >
-31-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:16:9-53
-32        <activity
-32-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:18:9-24:20
-33            android:name="com.superapp.tingtongapp.composetutorial.DetailsActivity"
-33-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:19:13-44
-34            android:exported="false" >
-34-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:20:13-37
-35            <meta-data
-35-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:21:13-23:36
-36                android:name="android.app.lib_name"
-36-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:22:17-52
-37                android:value="" />
-37-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:23:17-33
-38        </activity>
-39        <activity
-39-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:25:9-39:20
-40            android:name="com.superapp.tingtongapp.composetutorial.MainActivity"
-40-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:26:13-41
-41            android:exported="true"
-41-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:27:13-36
-42            android:label="@string/app_name"
-42-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:28:13-45
-43            android:theme="@style/Theme.ComposeTutorial" >
-43-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:29:13-57
-44            <intent-filter>
-44-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:30:13-34:29
-45                <action android:name="android.intent.action.MAIN" />
-45-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:31:17-69
-45-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:31:25-66
-46
-47                <category android:name="android.intent.category.LAUNCHER" />
-47-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:33:17-77
-47-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:33:27-74
-48            </intent-filter>
-49
-50            <meta-data
-50-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:21:13-23:36
-51                android:name="android.app.lib_name"
-51-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:22:17-52
-52                android:value="" />
-52-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:23:17-33
-53        </activity>
-54        <activity
-54-->[androidx.compose.ui:ui-tooling:1.1.1] C:\Users\monju\.gradle\caches\transforms-3\86ba9afb7f1dba084ba6be5c43a5a548\transformed\ui-tooling-1.1.1\AndroidManifest.xml:25:9-27:39
-55            android:name="androidx.compose.ui.tooling.PreviewActivity"
-55-->[androidx.compose.ui:ui-tooling:1.1.1] C:\Users\monju\.gradle\caches\transforms-3\86ba9afb7f1dba084ba6be5c43a5a548\transformed\ui-tooling-1.1.1\AndroidManifest.xml:26:13-71
-56            android:exported="true" />
-56-->[androidx.compose.ui:ui-tooling:1.1.1] C:\Users\monju\.gradle\caches\transforms-3\86ba9afb7f1dba084ba6be5c43a5a548\transformed\ui-tooling-1.1.1\AndroidManifest.xml:27:13-36
-57        <activity
-57-->[androidx.compose.ui:ui-test-manifest:1.1.1] C:\Users\monju\.gradle\caches\transforms-3\524ad328fd76e7771cc27894aa3e6b0b\transformed\ui-test-manifest-1.1.1\AndroidManifest.xml:25:9-27:39
-58            android:name="androidx.activity.ComponentActivity"
-58-->[androidx.compose.ui:ui-test-manifest:1.1.1] C:\Users\monju\.gradle\caches\transforms-3\524ad328fd76e7771cc27894aa3e6b0b\transformed\ui-test-manifest-1.1.1\AndroidManifest.xml:26:13-63
-59            android:exported="true" />
-59-->[androidx.compose.ui:ui-test-manifest:1.1.1] C:\Users\monju\.gradle\caches\transforms-3\524ad328fd76e7771cc27894aa3e6b0b\transformed\ui-test-manifest-1.1.1\AndroidManifest.xml:27:13-36
-60
-61        <provider
-61-->[androidx.emoji2:emoji2:1.0.0] C:\Users\monju\.gradle\caches\transforms-3\5e8df57aede9375c4e12b728208d4044\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-62            android:name="androidx.startup.InitializationProvider"
-62-->[androidx.emoji2:emoji2:1.0.0] C:\Users\monju\.gradle\caches\transforms-3\5e8df57aede9375c4e12b728208d4044\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
-63            android:authorities="com.superapp.tingtongapp.composetutorial.androidx-startup"
-63-->[androidx.emoji2:emoji2:1.0.0] C:\Users\monju\.gradle\caches\transforms-3\5e8df57aede9375c4e12b728208d4044\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
-64            android:exported="false" >
-64-->[androidx.emoji2:emoji2:1.0.0] C:\Users\monju\.gradle\caches\transforms-3\5e8df57aede9375c4e12b728208d4044\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+31        android:testOnly="true"
+32        android:theme="@style/Theme.ComposeTutorial" >
+32-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:16:9-53
+33        <activity
+33-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:19:9-33:20
+34            android:name="com.superapp.tingtongapp.composetutorial.MainActivity"
+34-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:20:13-41
+35            android:exported="true"
+35-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:21:13-36
+36            android:label="@string/app_name"
+36-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:22:13-45
+37            android:theme="@style/Theme.ComposeTutorial" >
+37-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:23:13-57
+38            <intent-filter>
+38-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:24:13-28:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:25:17-69
+39-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:25:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:27:17-77
+41-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:27:27-74
+42            </intent-filter>
+43
+44            <meta-data
+44-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:30:13-32:36
+45                android:name="android.app.lib_name"
+45-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:31:17-52
+46                android:value="" />
+46-->C:\Users\monju\AndroidStudioProjects\Jetpack-Compose\app\src\main\AndroidManifest.xml:32:17-33
+47        </activity>
+48        <activity
+48-->[androidx.compose.ui:ui-tooling:1.1.1] C:\Users\monju\.gradle\caches\transforms-3\86ba9afb7f1dba084ba6be5c43a5a548\transformed\ui-tooling-1.1.1\AndroidManifest.xml:25:9-27:39
+49            android:name="androidx.compose.ui.tooling.PreviewActivity"
+49-->[androidx.compose.ui:ui-tooling:1.1.1] C:\Users\monju\.gradle\caches\transforms-3\86ba9afb7f1dba084ba6be5c43a5a548\transformed\ui-tooling-1.1.1\AndroidManifest.xml:26:13-71
+50            android:exported="true" />
+50-->[androidx.compose.ui:ui-tooling:1.1.1] C:\Users\monju\.gradle\caches\transforms-3\86ba9afb7f1dba084ba6be5c43a5a548\transformed\ui-tooling-1.1.1\AndroidManifest.xml:27:13-36
+51        <activity
+51-->[androidx.compose.ui:ui-test-manifest:1.1.1] C:\Users\monju\.gradle\caches\transforms-3\524ad328fd76e7771cc27894aa3e6b0b\transformed\ui-test-manifest-1.1.1\AndroidManifest.xml:25:9-27:39
+52            android:name="androidx.activity.ComponentActivity"
+52-->[androidx.compose.ui:ui-test-manifest:1.1.1] C:\Users\monju\.gradle\caches\transforms-3\524ad328fd76e7771cc27894aa3e6b0b\transformed\ui-test-manifest-1.1.1\AndroidManifest.xml:26:13-63
+53            android:exported="true" />
+53-->[androidx.compose.ui:ui-test-manifest:1.1.1] C:\Users\monju\.gradle\caches\transforms-3\524ad328fd76e7771cc27894aa3e6b0b\transformed\ui-test-manifest-1.1.1\AndroidManifest.xml:27:13-36
+54
+55        <provider
+55-->[androidx.emoji2:emoji2:1.0.0] C:\Users\monju\.gradle\caches\transforms-3\5e8df57aede9375c4e12b728208d4044\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+56            android:name="androidx.startup.InitializationProvider"
+56-->[androidx.emoji2:emoji2:1.0.0] C:\Users\monju\.gradle\caches\transforms-3\5e8df57aede9375c4e12b728208d4044\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+57            android:authorities="com.superapp.tingtongapp.composetutorial.androidx-startup"
+57-->[androidx.emoji2:emoji2:1.0.0] C:\Users\monju\.gradle\caches\transforms-3\5e8df57aede9375c4e12b728208d4044\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+58            android:exported="false" >
+58-->[androidx.emoji2:emoji2:1.0.0] C:\Users\monju\.gradle\caches\transforms-3\5e8df57aede9375c4e12b728208d4044\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+59            <meta-data
+59-->[androidx.emoji2:emoji2:1.0.0] C:\Users\monju\.gradle\caches\transforms-3\5e8df57aede9375c4e12b728208d4044\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+60                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+60-->[androidx.emoji2:emoji2:1.0.0] C:\Users\monju\.gradle\caches\transforms-3\5e8df57aede9375c4e12b728208d4044\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+61                android:value="androidx.startup" />
+61-->[androidx.emoji2:emoji2:1.0.0] C:\Users\monju\.gradle\caches\transforms-3\5e8df57aede9375c4e12b728208d4044\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+62            <meta-data
+62-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\monju\.gradle\caches\transforms-3\2e1a20847016474e27280e0a9dc68b94\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+63                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+63-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\monju\.gradle\caches\transforms-3\2e1a20847016474e27280e0a9dc68b94\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+64                android:value="androidx.startup" />
+64-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\monju\.gradle\caches\transforms-3\2e1a20847016474e27280e0a9dc68b94\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
 65            <meta-data
-65-->[androidx.emoji2:emoji2:1.0.0] C:\Users\monju\.gradle\caches\transforms-3\5e8df57aede9375c4e12b728208d4044\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-66                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-66-->[androidx.emoji2:emoji2:1.0.0] C:\Users\monju\.gradle\caches\transforms-3\5e8df57aede9375c4e12b728208d4044\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+65-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:30:13-32:52
+66                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+66-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:31:17-85
 67                android:value="androidx.startup" />
-67-->[androidx.emoji2:emoji2:1.0.0] C:\Users\monju\.gradle\caches\transforms-3\5e8df57aede9375c4e12b728208d4044\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
-68            <meta-data
-68-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\monju\.gradle\caches\transforms-3\2e1a20847016474e27280e0a9dc68b94\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-69                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-69-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\monju\.gradle\caches\transforms-3\2e1a20847016474e27280e0a9dc68b94\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-70                android:value="androidx.startup" />
-70-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\monju\.gradle\caches\transforms-3\2e1a20847016474e27280e0a9dc68b94\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-71            <meta-data
-71-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:30:13-32:52
-72                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-72-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:31:17-85
-73                android:value="androidx.startup" />
-73-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:32:17-49
-74        </provider>
-75
-76        <receiver
-76-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:35:9-47:20
-77            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-77-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:36:13-76
-78            android:directBootAware="false"
-78-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:37:13-44
-79            android:enabled="true"
-79-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:38:13-35
-80            android:exported="true"
-80-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:39:13-36
-81            android:permission="android.permission.DUMP" >
-81-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:40:13-57
-82            <intent-filter>
-82-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:41:13-43:29
-83                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-83-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:42:17-91
-83-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:42:25-88
-84            </intent-filter>
-85            <intent-filter>
-85-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:44:13-46:29
-86                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-86-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:45:17-85
-86-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:45:25-82
-87            </intent-filter>
-88        </receiver>
-89    </application>
-90
-91</manifest>
+67-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:32:17-49
+68        </provider>
+69
+70        <receiver
+70-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:35:9-47:20
+71            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+71-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:36:13-76
+72            android:directBootAware="false"
+72-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:37:13-44
+73            android:enabled="true"
+73-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:38:13-35
+74            android:exported="true"
+74-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:39:13-36
+75            android:permission="android.permission.DUMP" >
+75-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:40:13-57
+76            <intent-filter>
+76-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:41:13-43:29
+77                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+77-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:42:17-91
+77-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:42:25-88
+78            </intent-filter>
+79            <intent-filter>
+79-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:44:13-46:29
+80                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+80-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:45:17-85
+80-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\monju\.gradle\caches\transforms-3\576cda5649ac3e00abb833266949cba2\transformed\profileinstaller-1.2.0\AndroidManifest.xml:45:25-82
+81            </intent-filter>
+82        </receiver>
+83    </application>
+84
+85</manifest>
